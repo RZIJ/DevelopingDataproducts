@@ -1,0 +1,27 @@
+Presentation
+========================================================
+author: Rick van Zijl
+date: 1-May-2018
+autosize: true
+
+Introduction
+========================================================
+
+Use the shiny app to create your linear prediction based on the swiss data set.
+
+- Choose your dependent variable (Y)
+- Choose two independent variables.
+
+Slide With Example Code
+========================================================
+
+```{r}
+summary(lm(Fertility ~ Agriculture , data = swiss))
+```
+
+Slide With the Plot generated in Shiny
+========================================================
+
+```{r, echo=FALSE}
+plot(x = fitted(lm(Fertility ~ Agriculture , data = swiss)), y = resid(lm(Fertility ~ Agriculture , data = swiss)))
+```
